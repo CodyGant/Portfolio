@@ -1,31 +1,25 @@
-import React from 'react'
-import { Navbar, Nav } from "react-bootstrap";
+import React from "react";
 
+import { Navbar, Container, Nav } from "react-bootstrap";
 
-export default function Header() {
+function Header() {
   return (
-    <div data-aos="fade-down" data-aos-easing="linear"
-    data-aos-duration="500" className = 'navbar'>
-<Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" sticky='top'>
-    
-    <Navbar.Brand href="/" className = "test"></Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
-        </Nav>
-        <Nav>
-       
-          <Nav.Link className = 'navLink' href="/Locations" >Locations</Nav.Link>
-          <Nav.Link className = 'navLink' href="/Menu">Menu</Nav.Link>
-          <Nav.Link className = 'navLink' href='/Reservations'>Reservations</Nav.Link>
-          <Nav.Link className = 'navLink' href="/privateDining">Private Dining</Nav.Link>
-          <Nav.Link className = 'navLink' href="/giftcards">Gift Cards</Nav.Link>
-          
-          <Nav.Link className = 'navLink' href="/butcher">Butcher Grille Box</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    
-  </Navbar>
-  </div>
-  )
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky='top'>
+      <Container>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+          </Nav>
+          <Nav>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#technologies">Technologies</Nav.Link>
+            <Nav.Link href='#projects'>Projects</Nav.Link>
+            <Nav.Link href="#resume-and-contact">Resume/Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
+
+export default Header;
