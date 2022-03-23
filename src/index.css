@@ -135,9 +135,12 @@ code {
 .aboutText {
   display: table-cell;
   vertical-align:middle;
-  color:#521111;
+  color:black;
   text-align: left;
   text-align: center;
+}
+.aboutText span{
+  color:#521111 !important;
 }
 
 .Technologies {
