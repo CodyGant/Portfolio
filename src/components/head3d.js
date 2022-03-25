@@ -1,30 +1,17 @@
-import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import Head from '../Myfacebig'
-function Box(props) {
-  const mesh = useRef();
-  // rotate the box
-  useFrame((state, delta) => {
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-  });
-  // draw the box
-  return (
-    <mesh {...props} ref={mesh}>
-    
-    
-     
-    </mesh>
-  );
-}
+import React, { Suspense} from 'react'
+import { Canvas } from "@react-three/fiber";
+import Head from "../Myfacebig";
 
 export default function Scene() {
-    
-  
   return (
-    <Canvas dpr={window.devicePixelRatio} >
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Head/>
-    </Canvas>
+    <>
+    <Canvas style={{ background: "#171717" }}>
+      <ambientLight intensity={1} />
+      <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
+      <Suspense fallback={null}>
+        <Head />
+      </Suspense>
+</Canvas>
+</>
   );
 }
