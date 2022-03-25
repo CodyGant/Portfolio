@@ -1,5 +1,5 @@
 import React from "react";
-
+import Head from '../components/head3d'
 function About() {
   return (
     <div class="screen">
@@ -9,19 +9,13 @@ function About() {
         <button value="Rockets">PROJECTS</button>
         <button value="Smoke Screen">RESUME</button>
         <button value="Booster Rockets">HOW TO CONTACT ME</button>
-        <section class="setButtons">
-          <button value="Destroy"></button>
-          <button value="Deploy"></button>
-        </section>
-        <button value="Retrograde Torpedoes"></button>
-        <button value="Science Canon"></button>
       </section>
 
       <section class="buttonGroup">
         <h2>ABOUT</h2>
         <section class="imageDisplay">
           <div class="aspect">
-          
+          <Head/>
           </div>
         </section>
         <p>Hello...</p>
@@ -45,18 +39,7 @@ function About() {
 
         <div class="visual2"></div>
 
-        <section class="setButtons">
-          <button value="1"></button>
-          <button value="2"></button>
-          <button value="3"></button>
-          <button value="4"></button>
-          <button value="x"></button>
-          <button value="x"></button>
-          <button value="x"></button>
-          <button value="x"></button>
-          <button value="x"></button>
-          <button value="x"></button>
-        </section>
+       
 
         <section>
           <p>

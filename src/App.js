@@ -7,6 +7,7 @@ import Technologies from "./components/Tech";
 import ContactMe from "./components/Contactme";
 import Footer from "./components/footer";
 import { Stack } from "react-bootstrap";
+
 function App() {
   useEffect(() => {
     AOS.init();
