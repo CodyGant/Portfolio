@@ -1,8 +1,9 @@
-import React, { Suspense} from 'react'
+import React, {Suspense} from 'react'
 import { Canvas } from "@react-three/fiber";
 import Head from "../Myfacebig";
 
 export default function Scene() {
+  
   return (
     <>
     <Canvas style={{ background: "#171717" }}>
@@ -12,6 +13,7 @@ export default function Scene() {
         <Head />
       </Suspense>
 </Canvas>
+
 </>
   );
 }
