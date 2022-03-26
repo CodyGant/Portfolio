@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@1,300&display=swap");
 body,
 html {
-  font-family: "Share Tech Mono", monospace;
+  
   background-color: #121;
   box-shadow: inset 0 0 200px #020;
   background: linear-gradient(to bottom, #001100 0%, #111311 100%);
   color: white !important;
   font-size: 16px;
-  font-family: "Red Hat Mono", monospace;
+  font-family: "Red Hat Mono", monospace !important;
 }
 
 .visual2 {
@@ -40,7 +40,7 @@ html {
 
 .visual1 {
   width: 100%;
-  height: 200px;
+  height: 200px !important;
   border: 1px solid green;
   position: relative;
   margin-bottom: 10px;
@@ -53,22 +53,7 @@ html {
   left: 0;
 }
 
-.visual1:after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid green;
-  width: 100%;
-  height: 1%;
-  animation: scan 5s infinite linear;
-}
-.visual1:before {
-  content: "";
-  display: block;
-  border-right: 1px solid green;
-  height: 100%;
-  width: 1%;
-  animation: scan 0.3s infinite alternate linear;
-}
+
 
 h1,
 h2,

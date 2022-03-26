@@ -1,5 +1,6 @@
 import React from "react";
 import Head from '../components/head3d'
+import Terminal from '../components/terminal'
 function About() {
   return (
     <div class="screen">
@@ -35,10 +36,12 @@ function About() {
 
       <section class="buttonGroup">
         <h2>Scanning</h2>
-        <div class="visual1"></div>
+        <div class="visual1">
+        <Terminal/>
+        </div>
 
         <div class="visual2"></div>
-
+       
        
 
         <section>
