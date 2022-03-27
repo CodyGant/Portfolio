@@ -1,7 +1,5 @@
 import React from 'react';
-
 import Terminal from "terminal-in-react";
-
 class terminal extends React.Component {
 
   render() 
@@ -13,7 +11,7 @@ class terminal extends React.Component {
           hideTopBar
           style={{ height: "150px", overflow: "hidden" }}
           commands={{
-            stop: (args, runCommand) => {
+            stop: () => {
             
               console.log("hi")
             },

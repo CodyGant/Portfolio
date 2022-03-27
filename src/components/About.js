@@ -15,7 +15,7 @@ class About extends React.Component {
         <button value="Booster Rockets">HOW TO CONTACT ME</button>
       </section>
 
-      <section class="buttonGroup">
+      <section className="buttonGroup">
         <h2>ABOUT</h2>
         <section className="imageDisplay">
           <div className="aspect">
@@ -41,7 +41,7 @@ class About extends React.Component {
 
       <section className="buttonGroup">
         <h2>Scanning</h2>
-        <div class="visual1">
+        <div className="visual1">
           <Terminal />
         </div>
 
