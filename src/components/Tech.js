@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Tech() {
-  return (
-    <div className = 'Technologies'>
-
-    </div>
-  )
+  return <div className="Technologies"></div>;
 }
 
-export default Tech
+export default Tech;

@@ -1,23 +1,26 @@
-import React from 'react'
-import Terminal from 'terminal-in-react';
-import { default as Model } from "../Myfacebig";
+import React from 'react';
 
+import Terminal from "terminal-in-react";
 
+class terminal extends React.Component {
 
-function terminal() {
+  render() 
   
-  return (
-    <div>
-      <Terminal hideTopBar style={{ height: "150px",   overflow: 'hidden'}}
-  commands={{
-    'Stop': (args, runCommand) => { 
-     
-    
-    }
-  }}
-/>
-    </div>
-  )
+  {
+    return (
+      <div>
+        <Terminal
+          hideTopBar
+          style={{ height: "150px", overflow: "hidden" }}
+          commands={{
+            stop: (args, runCommand) => {
+            
+              console.log("hi")
+            },
+          }}
+        />
+      </div>
+    );
+  }
 }
-
 export default terminal

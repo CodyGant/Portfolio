@@ -1,10 +1,13 @@
 import React from "react";
-import Head from '../components/head3d'
-import Terminal from '../components/terminal'
-function About() {
-  return (
-    <div class="screen">
-      <section class="buttonGroup">
+import Head from "../components/head3d";
+import Terminal from "../components/terminal";
+
+class About extends React.Component {
+  
+  render() {
+    return (
+      <div className="screen">
+      <section className="buttonGroup">
         <h2>PORTFOLIO</h2>
         <button value="Placebo Button">TECHNOLOGIES</button>
         <button value="Rockets">PROJECTS</button>
@@ -14,15 +17,17 @@ function About() {
 
       <section class="buttonGroup">
         <h2>ABOUT</h2>
-        <section class="imageDisplay">
-          <div class="aspect">
-          <Head/>
+        <section className="imageDisplay">
+          <div className="aspect">
+            <Head />
           </div>
         </section>
         <p>Hello...</p>
         <p>
-          My name is Cody Gant. I'm a Front End Developer and Full Time Student at Daytona State College
-          Majoring in Software Enginering. My passion is in computers and their ability to form the world around us in a cyber framework.
+          My name is Cody Gant. I'm a Front End Developer and Full Time Student
+          at Daytona State College Majoring in Software Enginering. My passion
+          is in computers and their ability to form the world around us in a
+          cyber framework.
           <hr />
           Sed rhoncus a leo congue sollicitudin. Fusce risus tortor, rutrum id
           egestas at, elementum in dui. Fusce bibendum purus eu turpis
@@ -34,15 +39,13 @@ function About() {
         </p>
       </section>
 
-      <section class="buttonGroup">
+      <section className="buttonGroup">
         <h2>Scanning</h2>
         <div class="visual1">
-        <Terminal/>
+          <Terminal />
         </div>
 
-        <div class="visual2"></div>
-       
-       
+        <div className="visual2"></div>
 
         <section>
           <p>
@@ -67,7 +70,7 @@ function About() {
         </section>
       </section>
     </div>
-  );
+    );
+  }
 }
-
-export default About;
+export default About
