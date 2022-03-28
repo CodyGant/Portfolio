@@ -3,34 +3,66 @@ import { useGLTF } from "@react-three/drei"; //importing library so i can use a 
 import { useFrame } from "@react-three/fiber"; //lets me create frames so glb can be animated
 import { useGlobalState } from "./state/index"; //importing global states
 //DEFAULT FACE MODEL
+
 function DefualtModel({ ...props }) {
   //setting global statment
-  let isAnimationrunning = useGlobalState("stopanimation");
-  //setting HeadMesh to null
-  let HeadMesh = null;
-  //rotating animation
-  const animation = useRef();
-  useFrame(({ clock }) => {
-    HeadMesh.current.rotation.y = Math.sin(clock.getElapsedTime());
-  });
+  useGlobalState("stopanimation", "sideprofile");
+  const isAnimationrunning = useGlobalState("stopanimation");
 
-  //if statment to determin if model will rotate or be stagnate
-  if (isAnimationrunning[0] === false) {
-    HeadMesh = animation;
-  } else {
-  }
-  //rendering the glb of my face
-  const group = useRef();
+  const leftprofile = useGlobalState("sideprofile")
+  //setting HeadMesh to null
+  let HeadMesh = useRef();
+
+  //grabbing the right glb
   const { nodes, materials } = useGLTF("/myfacebig.glb");
 
+  //rotating animation
+  function Animate(){
+    useFrame(({ clock }) => {
+      HeadMesh.current.rotation.y = Math.sin(clock.getElapsedTime());
+    });
+  }
+  //stops animation
+  function StopAnimate(){
+    useFrame(() => {
+      HeadMesh.current.rotation.y =0;
+      
+      HeadMesh.current.position.x = 0;
+    });
+  }
+  function Leftprofile(){
+    useFrame(() => {
+      HeadMesh.current.rotation.y = 5;
+      HeadMesh.current.position.x = 0;
+    });
+  }
+  
+
+  //when global variable 'stopanimation' is set to false
+  function AnimationRunning(){
+  if (isAnimationrunning[0] === false) {
+    Animate()
+   
+    //when global variable 'stopanimation' is set to true
+  } else{
+    StopAnimate()
+  }
+}AnimationRunning()
+  
+
+  if (leftprofile[0] === true){
+    Leftprofile()
+  }else{
+    AnimationRunning()
+  }
+  //rendering the glb of my face
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={HeadMesh} {...props} dispose={null}>
       <mesh
-        ref={HeadMesh}
         geometry={nodes.Mesh_0.geometry}
         material={materials.Material_0}
         position={[0, 0.25, 0]}
-        rotation={[0, 1.43, 0]}
+        rotation={[0, .1, 0]}
       />
     </group>
   );

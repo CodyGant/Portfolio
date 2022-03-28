@@ -1,24 +1,50 @@
 import React from 'react';
 import Terminal from "terminal-in-react";
-class terminal extends React.Component {
+import { setGlobalState, useGlobalState } from '../state/index'
 
-  render() 
-  
-  {
+function Terminall() {
+   useGlobalState("stopanimation", 'sideprofile');
     return (
       <div>
         <Terminal
           hideTopBar
-          style={{ height: "150px", overflow: "hidden" }}
+          style={{ height: "350px", overflow: "hidden" }}
           commands={{
             stop: () => {
-            
-              console.log("hi")
+              function stop(){
+               setGlobalState("stopanimation", true)
+               setGlobalState("sideprofile", false)
+              
+            }
+            stop()
             },
+            resume: () => {
+              function resume(){
+               setGlobalState("stopanimation", false)
+               setGlobalState("sideprofile", false)
+              
+            }
+            resume()
+            },
+            left: () => {
+              function left(){
+               setGlobalState("sideprofile", true)
+                
+              
+            }
+            left()
+            },
+           
           }}
+          descriptions={{
+            stop:'stops the animation on my head!',
+            resume: 'resumes the animation',
+            left: 'gives you a nice left-side profile'
+          }}
+          msg='Welcome! type "help" and try out some of the commands. '
         />
       </div>
     );
   }
-}
-export default terminal
+
+export default Terminall

@@ -8,7 +8,7 @@ class About extends React.Component {
     return (
       <div className="screen">
       <section className="buttonGroup">
-        <h2>PORTFOLIO</h2>
+       
         <button value="Placebo Button">TECHNOLOGIES</button>
         <button value="Rockets">PROJECTS</button>
         <button value="Smoke Screen">RESUME</button>
@@ -16,7 +16,7 @@ class About extends React.Component {
       </section>
 
       <section className="buttonGroup">
-        <h2>ABOUT</h2>
+        
         <section className="imageDisplay">
           <div className="aspect">
             <Head />
@@ -40,7 +40,7 @@ class About extends React.Component {
       </section>
 
       <section className="buttonGroup">
-        <h2>Scanning</h2>
+       
         <div className="visual1">
           <Terminal />
         </div>

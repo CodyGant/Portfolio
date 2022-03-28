@@ -9,7 +9,10 @@ html {
   font-size: 16px;
   font-family: "Red Hat Mono", monospace !important;
 }
+.terminalContainer{
+  height:250px !important;
 
+}
 .visual2 {
   width: 100%;
   height: 200px;
@@ -40,7 +43,7 @@ html {
 
 .visual1 {
   width: 100%;
-  height: 200px !important;
+  height: 400px !important;
   border: 1px solid green;
   position: relative;
   margin-bottom: 10px;
