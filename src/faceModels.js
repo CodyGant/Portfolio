@@ -14,25 +14,25 @@ function DefualtModel({ ...props }) {
   let HeadMesh = useRef();
 
   //grabbing the right glb
-  const { nodes, materials } = useGLTF("/myfacebig.glb");
+  const { nodes, materials } = useGLTF("/finalme.glb");
 
   //rotating animation
   function Animate(){
     useFrame(({ clock }) => {
-      HeadMesh.current.rotation.y = Math.sin(clock.getElapsedTime());
+      HeadMesh.current.rotation.y =clock.getElapsedTime();
     });
   }
   //stops animation
   function StopAnimate(){
     useFrame(() => {
-      HeadMesh.current.rotation.y =0;
+      HeadMesh.current.rotation.y =5.5;
       
       HeadMesh.current.position.x = 0;
     });
   }
   function Leftprofile(){
     useFrame(() => {
-      HeadMesh.current.rotation.y = 5;
+      HeadMesh.current.rotation.y =4.2;
       HeadMesh.current.position.x = 0;
     });
   }
@@ -61,13 +61,14 @@ function DefualtModel({ ...props }) {
       <mesh
         geometry={nodes.Mesh_0.geometry}
         material={materials.Material_0}
-        position={[0, 0.25, 0]}
-        rotation={[0, .1, 0]}
+        scale={[10.16, 14.57, 10.81]}
+        position={[0, 0, 0]}
+        rotation={[0, 1, 0]}
       />
     </group>
   );
 }
-useGLTF.preload("/myfacebig.glb");
+useGLTF.preload("/finalme.glb");
 
 class MyFace extends React.Component {
   render() {
