@@ -181,6 +181,11 @@ button:visited {
   left: 0;
 }
 
+.fullbody{
+  width:100%;
+  height:100vh;
+;
+}
 
 
 .imageDisplay:after {

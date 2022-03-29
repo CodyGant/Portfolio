@@ -69,6 +69,7 @@ class About extends React.Component {
           </p>
         </section>
       </section>
+     
     </div>
     );
   }

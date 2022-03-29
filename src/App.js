@@ -12,16 +12,20 @@ function App() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-    
   }, []);
   return (
-    <div className = 'App'>
-      
-      <header className="App-header">
-        <Stack>
-          <div><About /></div>
-          <div><Technologies/></div>
-          <div><ContactMe/></div>
+    <div >
+      <header >
+        <Stack className = 'imstacking'>
+          <div >
+            <About />
+          </div>
+          <div className = 'tech'>
+            <Technologies />
+          </div>
+          <div>
+            <ContactMe />
+          </div>
         </Stack>
       </header>
       <Footer />
