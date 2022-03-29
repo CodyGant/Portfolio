@@ -253,14 +253,7 @@ iframe#iframeVideo {
   }
 }
 
-@keyframes blipIn {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: auto;
-  }
-}
+
 
 @keyframes spin {
   0% {

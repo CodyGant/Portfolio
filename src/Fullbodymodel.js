@@ -7,12 +7,14 @@ import { useGLTF, useAnimations } from '@react-three/drei'; /* highlight-line */
 
 export default function Model({ ...props }) {
   const group = useRef();
+
   const { nodes, materials, animations } = useGLTF("/animatedbody.glb");
   const { actions } = useAnimations(animations, group); 
   useEffect(() => {
     /* highlight-line */
     actions["Armature|mixamo.com|Layer0"].play(); /* highlight-line */
   }); /* highlight-line */
+  
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -41,6 +43,7 @@ export default function Model({ ...props }) {
         geometry={nodes.Wolf3D_Outfit_Top.geometry}
         material={materials.Wolf3D_Outfit_Top}
         skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
+      
       />
       <skinnedMesh
         name="EyeLeft"
