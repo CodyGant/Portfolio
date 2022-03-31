@@ -6,10 +6,11 @@ import { useGlobalState } from "./state/index"; //importing global states
 
 function DefualtModel({ ...props }) {
   //setting global statment
-  useGlobalState("stopanimation", "sideprofile");
+  useGlobalState("stopanimation", "sideprofile","rightprofile");
   const isAnimationrunning = useGlobalState("stopanimation");
 
   const leftprofile = useGlobalState("sideprofile")
+  const rightprofile = useGlobalState("rightprofile")
   //setting HeadMesh to null
   let HeadMesh = useRef();
 
@@ -36,6 +37,18 @@ function DefualtModel({ ...props }) {
       HeadMesh.current.position.x = 0;
     });
   }
+  function Rightprofile(){
+    useFrame(() => {
+      HeadMesh.current.rotation.y =22.2;
+      HeadMesh.current.position.x = 0;
+    });
+  }if (rightprofile[0] === true){
+    Rightprofile()
+    
+  }else{
+    AnimationRunning()
+    
+  }
   
 
   //when global variable 'stopanimation' is set to false
@@ -55,6 +68,10 @@ function DefualtModel({ ...props }) {
   }else{
     AnimationRunning()
   }
+
+  
+
+
   //rendering the glb of my face
   return (
     <group ref={HeadMesh} {...props} dispose={null}>
